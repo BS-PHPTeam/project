@@ -18,7 +18,7 @@
                             <hr>
                             <div><a href="http://dribbble.com/gian_michelle" class="btn btn-primary">ホーム<i class="fa fa-dribbble"></i></a></div>
                             <hr>
-                            <div><a href="http://behance.net/gianm" class="btn btn-primary">aサインアウト<i class="fa fa-behance"></i></a></div>
+                            <div><a href="http://behance.net/gianm" class="btn btn-primary">サインアウト<i class="fa fa-behance"></i></a></div>
                             <hr>
                         </td>
                     </tr>
