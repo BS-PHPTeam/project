@@ -4,8 +4,24 @@
 <div style="width:600px; background-color:white; padding:30px 30px 30px 30px; border-radius: 10px;">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <table class="table table-striped table-hover">    
-        <TR>
-            <TD style="width:29%; background-color:ffefd5;">
+        <tr>
+            
+            
+<div class="gblnv_box">
+<a class="menu-trigger" href="#"> <!-- ←ハンバーガーボタン -->
+	<span></span>
+	<span></span>
+</a>
+<div class="gblnv_block">
+	<ul class="gblnv_list"> <!-- ←ハンバーガーボタン内、グローバルメニュー -->
+		<li><a href="articles/index">一覧</a></li>
+		<li><a href="articles/create">投稿</a></li>
+	</ul>
+</div>
+</div>
+        
+        
+            <td style="width:29%; background-color:ffefd5;">
                 <table>
                     <tr>
                         <td>
@@ -22,11 +38,9 @@
                             <hr>
                         </td>
                     </tr>
-                    </tbody>
-
                 </table>
-            </TD>
-            <TD style="width:70%; background-color:fdf5e6; padding:0px 0px 0px 30px;">
+            </td>
+            <td style="width:70%; background-color:fdf5e6; padding:0px 0px 0px 30px;">
                 <table>
                     <tr>
                     <h2>List</h2>
@@ -53,15 +67,29 @@
                 </tr>
                     @endforeach
                 </table>
-            </TD>
-        </TR>
-    </TABLE>
+            </td>
+        </tr>
+    </table>
 
 
 </div>
+
 @endsection
+
+
 <script type="text/javascript">
-  function func_update(){
-  location.reload();
-}
+$(document).ready(function() {
+	$(".menu-trigger").click(function () {
+	  $(this).toggleClass("active");
+	  $(this).next().toggleClass("onanimation");
+	  $('ul li').hide();
+	  $('ul li').each(function(i) {
+	 	 $(this).delay(80 * i).fadeIn(500);
+	  });
+	});
+});
+
+//  function func_update(){
+//  location.reload();
+//}
 </script>

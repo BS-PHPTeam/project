@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
 // get
 Route::get('/', 'ArticlesController@index');
 Route::get('articles/index', 'ArticlesController@index');
